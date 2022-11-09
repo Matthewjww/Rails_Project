@@ -1,0 +1,24 @@
+<div id="<%= dom_id course %>">
+  <p>
+    <strong>Name:</strong>
+    <%= course.name %>
+  </p>
+
+  <p>
+    <strong>Course:</strong>
+    <%= course.course %>
+  </p>
+
+  <p>
+    <strong>Prefix:</strong>
+    <%= course.prefix_id %>
+  </p>
+
+  <p>
+    <strong>Sections:</strong>
+    <% course.sections.each do |section| %>
+      <%= section.name_course %>
+    <% end %>
+  </p>
+
+</div>

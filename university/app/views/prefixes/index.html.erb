@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<%= form_tag(prefixes_url, method: "get") do %>
+  <%= label_tag(:query, "Search by prefix:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<h1>Prefixes</h1>
+
+<div id="prefixes">
+  <% @prefixes.each do |prefix| %>
+    <%= render prefix %>
+    <p>
+      <%= link_to "Show this prefix", prefix %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New prefix", new_prefix_path %>

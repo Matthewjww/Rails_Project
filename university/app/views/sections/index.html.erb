@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<%= form_tag(sections_url, method: "get") do %>
+  <%= label_tag(:query, "Search by section number:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<h1>Sections</h1>
+
+<div id="sections">
+  <% @sections.each do |section| %>
+    <%= render section %>
+    <p>
+      <%= link_to "Show this section", section %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New section", new_section_path %>

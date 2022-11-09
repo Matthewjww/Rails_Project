@@ -1,0 +1,29 @@
+<div id="<%= dom_id section %>">
+  <p>
+    <strong>Section:</strong>
+    <%= section.section %>
+  </p>
+
+  <p>
+    <strong>Crn:</strong>
+    <%= section.crn %>
+  </p>
+
+  <p>
+    <strong>Course:</strong>
+    <%= section.course.short_name %>
+  </p>
+
+  <p>
+    <strong>Semester:</strong>
+    <%= section.semester.name %>
+  </p>
+
+  <p>
+    <strong>People:</strong>
+    <% section.people.each do |people| %>
+      <%= people.name %>
+    <% end %>
+  </p>
+
+</div>
