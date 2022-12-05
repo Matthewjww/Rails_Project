@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :semesters
+  root 'prefixes#index'
   resources :sections
+  resources :semesters
   resources :prefixes
   resources :people
   resources :courses
